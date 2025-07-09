@@ -99,7 +99,7 @@ export default function PortfolioPage() {
                     </Button>
                   </a>
                   <a
-                    href="https://drive.google.com/file/d/1oajm_8DgtMegUa0ZUIAHpEpvVCvBNRN9/view"
+                    href="https://drive.google.com/file/d/15VEbBnzrspxyCoVmLjV6usVagpIuydLe/view?usp=sharing"
                     download
                     className="inline-block"
                   >

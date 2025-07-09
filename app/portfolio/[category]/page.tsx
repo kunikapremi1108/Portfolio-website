@@ -15,7 +15,7 @@ const categoryItems: Record<string, Array<{
 }>> = {
   "personal-branding": [
     { img: "/1.png", alt: "Personal Branding", title: "Personal Branding", description: "Complete branding package" },
-    { img: "/Kunika Premi.png", alt: "LinkedIn Banner", title: "LinkedIn Banner", description: "Professional profile banner" },
+    { img: "/kunika premi.png", alt: "LinkedIn Banner", title: "LinkedIn Banner", description: "Professional profile banner" },
     { img: "/KV7.png", alt: "KV7 Logo", title: "KV7 Logo", description: "Minimalist brand identity" }
   ],
   "social-media-designs": [

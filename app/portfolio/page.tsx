@@ -13,7 +13,7 @@ const portfolioCategories = [
     title: "Personal Branding",
     items: [
       { img: "/1.png", alt: "Kunika Premi Personal Branding", title: "Personal Branding", description: "Complete personal branding package for Kunika Premi" },
-      { img: "/Kunika Premi.png", alt: "LinkedIn Banner", title: "LinkedIn Banner", description: "Professional banner design for LinkedIn profile" },
+      { img: "/kunika premi.png", alt: "LinkedIn Banner", title: "LinkedIn Banner", description: "Professional banner design for LinkedIn profile" },
       { img: "/KV7.png", alt: "KV7 Logo", title: "KV7 Logo", description: "Minimalist logo design" }
     ]
   },
