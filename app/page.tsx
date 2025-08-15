@@ -7,7 +7,6 @@ import {
   Github,
   Linkedin,
   Mail,
-  Phone,
   MapPin,
   Calendar,
   Users,
@@ -32,37 +31,40 @@ export default function PortfolioPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center space-x-2">
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
+        <div className="container flex h-16 items-center justify-between px-10 md:px-6">
+          {/* Left Section - Logo */}
+          <div className="flex items-center space-x-3">
             <Palette className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-bold">Kunika Premi</span>
+            <span className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">Kunika Premi</span>
           </div>
 
-          <nav className="hidden md:flex items-center space-x-6">
-            <Link href="#about" className="text-sm font-medium hover:text-primary transition-colors">
+          {/* Center Section - Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link href="#about" className="text-sm font-semibold hover:text-primary transition-colors duration-200 py-2 px-3 rounded-md hover:bg-primary/10">
               About
             </Link>
-            <Link href="#experience" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link href="#experience" className="text-sm font-semibold hover:text-primary transition-colors duration-200 py-2 px-3 rounded-md hover:bg-primary/10">
               Experience
             </Link>
-            <Link href="#projects" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link href="#projects" className="text-sm font-semibold hover:text-primary transition-colors duration-200 py-2 px-3 rounded-md hover:bg-primary/10">
               Projects
             </Link>
-            <Link href="#skills" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link href="#skills" className="text-sm font-semibold hover:text-primary transition-colors duration-200 py-2 px-3 rounded-md hover:bg-primary/10">
               Skills
             </Link>
-            <Link href="#certifications" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link href="#certifications" className="text-sm font-semibold hover:text-primary transition-colors duration-200 py-2 px-3 rounded-md hover:bg-primary/10">
               Certifications
             </Link>
-            <Link href="#achievements" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link href="#achievements" className="text-sm font-semibold hover:text-primary transition-colors duration-200 py-2 px-3 rounded-md hover:bg-primary/10">
               Achievements
             </Link>
-            <Link href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link href="#contact" className="text-sm font-semibold hover:text-primary transition-colors duration-200 py-2 px-3 rounded-md hover:bg-primary/10">
               Contact
             </Link>
           </nav>
 
+          {/* Right Section - Theme Toggle */}
           <div className="flex items-center space-x-4">
             <ThemeToggle />
             <Button variant="ghost" size="icon" className="md:hidden">
@@ -157,11 +159,11 @@ export default function PortfolioPage() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+        <section id="about" className="w-full py-8 md:py-16 lg:py-20 bg-muted">
           <div className="container px-4 md:px-6 mx-auto">
-            <div className="flex flex-col items-center text-center space-y-8 max-w-6xl mx-auto">
-              <div className="space-y-4">
-                <Badge variant="secondary">About Me</Badge>
+            <div className="flex flex-col items-center text-center space-y-6 max-w-6xl mx-auto">
+              <div className="space-y-3">
+                <Badge variant="secondary" className="text-base px-4 py-2">About Me</Badge>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
                   Passionate about creating digital experiences that matter
                 </h2>
@@ -251,12 +253,12 @@ export default function PortfolioPage() {
         </section>
 
         {/* Experience Section */}
-        <section id="experience" className="w-full py-12 md:py-24 lg:py-32">
+        <section id="experience" className="w-full py-8 md:py-16 lg:py-20">
           <div className="container px-4 md:px-6 mx-auto">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="flex flex-col items-center justify-center space-y-3 text-center">
               <div className="space-y-2 max-w-4xl">
-                <Badge variant="secondary">Professional Experience</Badge>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">My Journey So Far</h2>
+                <Badge variant="secondary" className="text-base px-4 py-2">Professional Experience</Badge>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">My Journey So Far</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Hands-on experience from multiple internships in graphic design and frontend development.
                 </p>
@@ -336,12 +338,12 @@ export default function PortfolioPage() {
         </section>
 
         {/* Projects Section */}
-        <section id="projects" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+        <section id="projects" className="w-full py-8 md:py-16 lg:py-20 bg-muted">
           <div className="container px-4 md:px-6 mx-auto">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="flex flex-col items-center justify-center space-y-3 text-center">
               <div className="space-y-2 max-w-4xl">
-                <Badge variant="secondary">Featured Projects</Badge>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">My Recent Work</h2>
+                <Badge variant="secondary" className="text-base px-4 py-2">Portfolio</Badge>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Featured Projects</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Here are some of the projects I've worked on, showcasing my skills in both design and development.
                 </p>
@@ -508,12 +510,12 @@ export default function PortfolioPage() {
         </section>
 
         {/* Skills Section */}
-        <section id="skills" className="w-full py-12 md:py-24 lg:py-32">
+        <section id="skills" className="w-full py-8 md:py-16 lg:py-20">
           <div className="container px-4 md:px-6 mx-auto">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="flex flex-col items-center justify-center space-y-3 text-center">
               <div className="space-y-2 max-w-4xl">
-                <Badge variant="secondary">Technical Skills</Badge>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">What I bring to the table</h2>
+                <Badge variant="secondary" className="text-base px-4 py-2">Technical Skills</Badge>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">What I bring to the table</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   A comprehensive skill set spanning programming, design, and development tools.
                 </p>
@@ -586,12 +588,12 @@ export default function PortfolioPage() {
         </section>
 
         {/* Certifications Section */}
-        <section id="certifications" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+        <section id="certifications" className="w-full py-8 md:py-16 lg:py-20 bg-muted">
           <div className="container px-4 md:px-6 mx-auto">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="flex flex-col items-center justify-center space-y-3 text-center">
               <div className="space-y-2 max-w-4xl">
-                <Badge variant="secondary">Certifications</Badge>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Continuous Learning</h2>
+                <Badge variant="secondary" className="text-base px-4 py-2">Certifications</Badge>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Continuous Learning</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Committed to staying updated with the latest technologies and best practices.
                 </p>
@@ -625,12 +627,12 @@ export default function PortfolioPage() {
         </section>
 
         {/* Achievements Section */}
-        <section id="achievements" className="w-full py-12 md:py-24 lg:py-32">
+        <section id="achievements" className="w-full py-8 md:py-16 lg:py-20">
           <div className="container px-4 md:px-6 mx-auto">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="flex flex-col items-center justify-center space-y-3 text-center">
               <div className="space-y-2 max-w-4xl">
-                <Badge variant="secondary">Achievements</Badge>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Recognition & Awards</h2>
+                <Badge variant="secondary" className="text-base px-4 py-2">Achievements</Badge>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Recognition & Awards</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Celebrating milestones and recognition in academics, competitions, and leadership.
                 </p>
@@ -678,12 +680,12 @@ export default function PortfolioPage() {
 
 
         {/* Contact Section */}
-        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+        <section id="contact" className="w-full py-8 md:py-16 lg:py-20 bg-muted">
           <div className="container px-4 md:px-6 mx-auto">
-            <div className="flex flex-col items-center justify-center space-y-8 text-center max-w-6xl mx-auto">
-              <div className="space-y-4">
-                <Badge variant="secondary">Get In Touch</Badge>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Let's work together</h2>
+            <div className="flex flex-col items-center justify-center space-y-6 text-center max-w-6xl mx-auto">
+              <div className="space-y-3">
+                <Badge variant="secondary" className="text-base px-4 py-2">Get In Touch</Badge>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Let's work together</h2>
                 <p className="max-w-[600px] mx-auto text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Have a project in mind? I'd love to hear about it. Let's discuss how we can bring your ideas to life.
                 </p>
@@ -693,19 +695,12 @@ export default function PortfolioPage() {
                 <EnhancedContactForm />
               </div>
 
-              <div className="grid gap-4 md:grid-cols-3 pt-8 max-w-4xl mx-auto w-full">
+              <div className="grid gap-4 md:grid-cols-2 pt-8 max-w-4xl mx-auto w-full">
                 <Card className="hover:shadow-lg transition-shadow">
                   <CardHeader className="text-center">
                     <Mail className="h-8 w-8 mx-auto text-primary" />
                     <CardTitle>Email</CardTitle>
                     <CardDescription>kunikapremi11@gmail.com</CardDescription>
-                  </CardHeader>
-                </Card>
-                <Card className="hover:shadow-lg transition-shadow">
-                  <CardHeader className="text-center">
-                    <Phone className="h-8 w-8 mx-auto text-primary" />
-                    <CardTitle>Phone</CardTitle>
-                    <CardDescription>+91-9311307442</CardDescription>
                   </CardHeader>
                 </Card>
                 <Card className="hover:shadow-lg transition-shadow">
