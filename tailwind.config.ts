@@ -96,3 +96,36 @@ const config: Config = {
   plugins: [require("tailwindcss-animate")],
 };
 export default config;
+export const categoryItems: Record<string, Array<{
+  img: string;
+  alt: string;
+  title: string;
+  description: string;
+}>> = {
+  "UI/UX design": [
+    { img: "/1.png", alt: "Personal Branding", title: "Personal Branding", description: "Complete branding package" },
+  ],
+  "personal-branding": [
+    { img: "/1.png", alt: "Personal Branding", title: "Personal Branding", description: "Complete branding package" },
+    { img: "/kunika premi.png", alt: "LinkedIn Banner", title: "LinkedIn Banner", description: "Professional profile banner" },
+    { img: "/KV7.png", alt: "KV7 Logo", title: "KV7 Logo", description: "Minimalist brand identity" }
+  ],
+  "social-media-designs": [
+    { img: "/postdesign (2).png", alt: "Social Media", title: "Grow Your Business", description: "Marketing campaign" },
+    { img: "/6element (1).png", alt: "Social Media", title: "Hit Your Goals", description: "Performance graphic" },
+    { img: "/4.png", alt: "Social Media", title: "Boost Your Brand", description: "Promotional content" },
+    { img: "/postdesign (1).png", alt: "Social Media", title: "Brand Promotion", description: "Marketing materials" },
+    { img: "/postdesign (3).png", alt: "Social Media", title: "Campaign", description: "Social media visuals" }
+  ],
+  "instagram-stories": [
+    { img: "/ff.jpg", alt: "Instagram Story", title: "Aesthetic", description: "Visual story design" },
+    { img: "/ll.jpg", alt: "Instagram Story", title: "Birthday", description: "Celebration concept" },
+    { img: "/kk.jpg", alt: "Instagram Story", title: "Event", description: "Brand activation" },
+    { img: "/Story.png", alt: "Instagram Story", title: "Brand Story", description: "Company narrative" }
+  ],
+  "infographics": [
+    { img: "/Python.png", alt: "Infographic", title: "Marketing", description: "Services diagram" },
+    { img: "/X.png", alt: "Infographic", title: "Targets", description: "Goal visualization" },
+    { img: "/presents.png", alt: "Infographic", title: "Event", description: "Hackathon graphics" }
+  ]
+};

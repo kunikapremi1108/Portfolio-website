@@ -79,13 +79,13 @@ export default function PortfolioPage() {
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_500px] items-center">
               <div className="flex flex-col justify-center space-y-6">
                 <div className="space-y-4">
-                  <Badge variant="secondary" className="w-fit animate-pulse">
+                  <Badge variant="secondary" className="w-fit animate-pulse text-base px-4 py-2">
                     👋 Available for new opportunities
                   </Badge>
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                     Graphic Designer & Frontend Developer
                   </h1>
-                  <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                  <p className="max-w-[600px] text-muted-foreground md:text-xl text-justify">
                     Creative and detail-oriented B.Tech student passionate about graphic design and frontend
                     development. I blend creativity with technical skills to create seamless digital experiences.
                   </p>
@@ -142,8 +142,8 @@ export default function PortfolioPage() {
                 <div className="relative">
                   <Image
                     src="/profile.jpg"
-                    width={500}
-                    height={500}
+                    width={400}
+                    height={400}
                     alt="Kunika Premi"
                     className="aspect-square overflow-hidden rounded-full object-cover shadow-2xl"
                   />
@@ -170,12 +170,12 @@ export default function PortfolioPage() {
               <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 w-full">
                 <div className="space-y-6 text-left">
                   <div className="space-y-4 text-muted-foreground">
-                    <p>
+                    <p className="text-justify">
                       I am a creative and detail-oriented third-year B.Tech. student with a deep passion for graphic
                       design and frontend development. With hands-on experience from internships and a certification in
                       Figma UI/UX Design, I have worked on designing visually appealing and user-friendly layouts.
                     </p>
-                    <p>
+                    <p className="text-justify">
                       I enjoy blending creativity with technical skills to create seamless digital experiences. Always
                       eager to learn, explore new design trends, and refine my development skills, I am looking for
                       opportunities to grow, collaborate, and contribute to meaningful projects.
@@ -270,7 +270,7 @@ export default function PortfolioPage() {
                       <Palette className="h-6 w-6 text-primary" />
                       <CardTitle>Graphic Design Intern</CardTitle>
                     </div>
-                    <Badge variant="outline">Apr 2025 - Present</Badge>
+                    <Badge variant="outline">Apr 2025 - July 2025</Badge>
                   </div>
                   <CardDescription className="font-medium">Prodge Design</CardDescription>
                 </CardHeader>
@@ -519,9 +519,9 @@ export default function PortfolioPage() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-6xl items-start gap-6 py-12 lg:grid-cols-3 lg:gap-12">
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
+            <div className="mx-auto grid max-w-6xl items-stretch gap-6 py-12 lg:grid-cols-3 lg:gap-12">
+              <Card className="hover:shadow-lg transition-shadow h-full flex flex-col">
+                <CardHeader className="flex-1">
                   <CardTitle className="flex items-center space-x-2">
                     <Code className="h-6 w-6 text-primary" />
                     <span>Programming Languages</span>
@@ -530,7 +530,7 @@ export default function PortfolioPage() {
                     Strong foundation in multiple programming languages for diverse development needs.
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-1">
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="outline">C/C++</Badge>
                     <Badge variant="outline">Java</Badge>
@@ -541,8 +541,8 @@ export default function PortfolioPage() {
                 </CardContent>
               </Card>
 
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
+              <Card className="hover:shadow-lg transition-shadow h-full flex flex-col">
+                <CardHeader className="flex-1">
                   <CardTitle className="flex items-center space-x-2">
                     <Monitor className="h-6 w-6 text-primary" />
                     <span>Web Technologies</span>
@@ -551,7 +551,7 @@ export default function PortfolioPage() {
                     Frontend development skills for creating responsive and interactive web applications.
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-1">
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="outline">HTML</Badge>
                     <Badge variant="outline">CSS</Badge>
@@ -561,8 +561,8 @@ export default function PortfolioPage() {
                 </CardContent>
               </Card>
 
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
+              <Card className="hover:shadow-lg transition-shadow h-full flex flex-col">
+                <CardHeader className="flex-1">
                   <CardTitle className="flex items-center space-x-2">
                     <Palette className="h-6 w-6 text-primary" />
                     <span>Design & Tools</span>
@@ -571,7 +571,7 @@ export default function PortfolioPage() {
                     Design and development tools for creating beautiful and functional digital experiences.
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-1">
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="outline">Figma</Badge>
                     <Badge variant="outline">Canva</Badge>
@@ -597,8 +597,9 @@ export default function PortfolioPage() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-6xl items-start gap-4 py-12 lg:grid-cols-2 lg:gap-6">
+            <div className="mx-auto grid max-w-6xl items-stretch gap-4 py-12 lg:grid-cols-2 lg:gap-6">
               {[
+                { name: "Python Programming: A Step-by-Step Programming Course", org: "Udemy", date: "July 2025" },
                 { name: "ChatGPT Prompt Engineering for Developers", org: "DeepLearning.AI", date: "May 2025" },
                 { name: "Full Stack Developer", org: "One RoadMap", date: "May 2025" },
                 { name: "Frontend Development", org: "One RoadMap", date: "May 2025" },
@@ -608,8 +609,8 @@ export default function PortfolioPage() {
                 { name: "500 difficulty rating completion in Python", org: "CodeChef", date: "July 2024" },
                 { name: "Programming Essentials in Python", org: "Cisco", date: "Apr 2024" },
               ].map((cert, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
-                  <CardHeader className="pb-3">
+                <Card key={index} className="hover:shadow-lg transition-shadow h-full flex flex-col">
+                  <CardHeader className="pb-3 flex-1">
                     <div className="flex items-center justify-between">
                       <Award className="h-5 w-5 text-primary" />
                       <Badge variant="outline">{cert.date}</Badge>
@@ -635,7 +636,7 @@ export default function PortfolioPage() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-6xl items-start gap-6 py-12 lg:grid-cols-3 lg:gap-8">
+            <div className="mx-auto grid max-w-6xl items-start gap-6 py-12 lg:grid-cols-2 lg:gap-8">
               <Card className="hover:shadow-lg transition-shadow text-center">
                 <CardHeader>
                   <Trophy className="h-12 w-12 mx-auto text-yellow-500" />
@@ -660,6 +661,15 @@ export default function PortfolioPage() {
                   <CardTitle>Event Organizer</CardTitle>
                   <CardDescription>ABES Collegiate Programming Contest (ACPC) 2024</CardDescription>
                   <Badge variant="outline">Apr 2024</Badge>
+                </CardHeader>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow text-center">
+                <CardHeader>
+                  <Users className="h-12 w-12 mx-auto text-blue-500" />
+                  <CardTitle>Chair of ABES ACM Women's Chapter</CardTitle>
+                  <CardDescription>Leading the ACM Women's Chapter at ABES Engineering College</CardDescription>
+                  <Badge variant="outline">May 2025</Badge>
                 </CardHeader>
               </Card>
             </div>

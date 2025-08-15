@@ -1,78 +1,52 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Grid3x3, ImageIcon, LayoutGrid, Palette, X } from "lucide-react";
+import { ArrowLeft, LayoutGrid, Palette, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { ThemeToggle } from "../components/theme-toggle";
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader } from "@/components/ui/dialog";
-
-const portfolioCategories = [
-  {
-    title: "Personal Branding",
-    items: [
-      { img: "/1.png", alt: "Kunika Premi Personal Branding", title: "Personal Branding", description: "Complete personal branding package for Kunika Premi" },
-      { img: "/kunika premi.png", alt: "LinkedIn Banner", title: "LinkedIn Banner", description: "Professional banner design for LinkedIn profile" },
-      { img: "/KV7.png", alt: "KV7 Logo", title: "KV7 Logo", description: "Minimalist logo design" }
-    ]
-  },
-  {
-    title: "Social Media Designs",
-    items: [
-      { img: "/postdesign (2).png", alt: "Social Media Post", title: "Grow Your Business", description: "Marketing campaign for CreatR Digital" },
-      { img: "/6element (1).png", alt: "Social Media Post", title: "Hit Your Goals", description: "Motivational social media content" },
-      { img: "/4.png", alt: "Social Media Post", title: "Boost Your Brand", description: "Brand promotion materials" }
-    ]
-  },
-  {
-    title: "Instagram Stories",
-    items: [
-      { img: "/ff.jpg", alt: "Instagram Story", title: "Aesthetic Story", description: "Visual storytelling design" },
-      { img: "/ll.jpg", alt: "Instagram Story", title: "Birthday Story", description: "Celebration design concept" },
-      { img: "/Story.png", alt: "Instagram Story", title: "Branding Story", description: "Company branding narrative" }
-    ]
-  },
-  {
-    title: "Infographics",
-    items: [
-      { img: "/Python.png", alt: "Infographic Design", title: "Marketing Services", description: "Service diagram visualization" },
-      { img: "/X.png", alt: "Infographic Design", title: "Achieve Targets", description: "Goal achievement breakdown" },
-      { img: "/presents.png", alt: "Infographic Design", title: "Hackathon", description: "Event presentation design" }
-    ]
-  }
-];
+import { portfolioCategories, PortfolioItem } from "./data";
 
 export default function PortfolioPage() {
-  const [selectedImage, setSelectedImage] = useState<null | {
-    img: string;
-    alt: string;
-    title: string;
-    description: string;
-  }>(null);
+  const [selectedItem, setSelectedItem] = useState<null | PortfolioItem>(null);
 
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900">
-      {/* Image Detail Modal */}
-      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+      {/* Detail Modal */}
+      <Dialog open={!!selectedItem} onOpenChange={() => setSelectedItem(null)}>
         <DialogContent className="sm:max-w-4xl p-0 overflow-hidden">
-          {selectedImage && (
+          {selectedItem && (
             <>
               <DialogHeader className="p-6 pb-0">
-                <h3 className="text-2xl font-semibold">{selectedImage.title}</h3>
-                <p className="text-muted-foreground">{selectedImage.description}</p>
+                <h3 className="text-2xl font-semibold">{selectedItem.title}</h3>
+                <p className="text-muted-foreground">{selectedItem.description}</p>
               </DialogHeader>
               <div className="relative aspect-video w-full">
-                <Image
-                  src={selectedImage.img}
-                  alt={selectedImage.alt}
-                  fill
-                  className="object-contain"
-                  priority
-                />
+                {selectedItem.video ? (
+                  <video
+                    src={selectedItem.video}
+                    controls
+                    autoPlay
+                    muted
+                    loop
+                    className="w-full h-full object-contain"
+                  />
+                ) : (
+                  selectedItem.img && (
+                    <Image
+                      src={selectedItem.img}
+                      alt={selectedItem.alt}
+                      fill
+                      className="object-contain"
+                      priority
+                    />
+                  )
+                )}
               </div>
               <div className="p-6 pt-0 flex justify-end">
-                <Button onClick={() => setSelectedImage(null)} className="gap-2">
+                <Button onClick={() => setSelectedItem(null)} className="gap-2">
                   Close <X className="h-4 w-4" />
                 </Button>
               </div>
@@ -125,16 +99,28 @@ export default function PortfolioPage() {
                   {category.items.slice(0, 2).map((item, itemIndex) => (
                     <button
                       key={itemIndex}
-                      onClick={() => setSelectedImage(item)}
+                      onClick={() => setSelectedItem(item)}
                       className="relative overflow-hidden rounded-lg aspect-square hover:shadow-lg transition-all group"
                     >
-                      <Image
-                        src={item.img}
-                        alt={item.alt}
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        priority={index < 2 && itemIndex < 2} // Prioritize first few images
-                      />
+                      {item.video ? (
+                        <video
+                          src={item.video}
+                          muted
+                          loop
+                          autoPlay
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                      ) : (
+                        item.img && (
+                          <Image
+                            src={item.img}
+                            alt={item.alt}
+                            fill
+                            className="object-cover transition-transform duration-300 group-hover:scale-105"
+                            priority={index < 2 && itemIndex < 2}
+                          />
+                        )
+                      )}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-4">
                         <h3 className="text-white font-medium">{item.title}</h3>
                       </div>
@@ -142,12 +128,16 @@ export default function PortfolioPage() {
                   ))}
                 </div>
 
-                <Button 
-                  variant="ghost" 
+                <Button
+                  variant="ghost"
                   className="mt-4 flex items-center gap-2 pl-0 group-hover:pl-2 transition-all"
                   asChild
                 >
-                  <Link href={`/portfolio/${category.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                  <Link
+                    href={`/portfolio/${category.title
+                      .toLowerCase()
+                      .replace(/[\/\s]+/g, "-")}`}
+                  >
                     View All <ArrowLeft className="h-4 w-4 rotate-180" />
                   </Link>
                 </Button>
