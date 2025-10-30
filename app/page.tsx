@@ -85,7 +85,7 @@ export default function PortfolioPage() {
                     👋 Available for new opportunities
                   </Badge>
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                    Graphic Designer & Frontend Developer
+                    Graphic Designer & FullStack Developer
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl text-justify">
                     Creative and detail-oriented B.Tech student passionate about graphic design and frontend
@@ -101,7 +101,7 @@ export default function PortfolioPage() {
                     </Button>
                   </a>
                   <a
-                    href="https://drive.google.com/file/d/15VEbBnzrspxyCoVmLjV6usVagpIuydLe/view?usp=sharing"
+                    href="https://drive.google.com/file/d/15zp5y0m-2dDoxTXVvlah4ZZMNUy-Nw8h/view?usp=sharing"
                     download
                     className="inline-block"
                   >
@@ -338,176 +338,269 @@ export default function PortfolioPage() {
         </section>
 
         {/* Projects Section */}
-        <section id="projects" className="w-full py-8 md:py-16 lg:py-20 bg-muted">
-          <div className="container px-4 md:px-6 mx-auto">
-            <div className="flex flex-col items-center justify-center space-y-3 text-center">
-              <div className="space-y-2 max-w-4xl">
-                <Badge variant="secondary" className="text-base px-4 py-2">Portfolio</Badge>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Featured Projects</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Here are some of the projects I've worked on, showcasing my skills in both design and development.
-                </p>
-              </div>
-            </div>
-            <div className="mx-auto grid max-w-6xl items-start gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="aspect-video relative">
-                  <Image
-                    src="/pizza.jpg"
-                    width={500}
-                    height={300}
-                    alt="Pizza Ordering Chatbot"
-                    className="object-cover w-full h-full"
-                  />
-                </div>
-                <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
-                    <Bot className="h-5 w-5" />
-                    <span>Pizza Ordering Chatbot</span>
-                  </CardTitle>
-                  <CardDescription>
-                    AI-powered pizza ordering chatbot with prompt engineering and context tracking for smooth
-                    conversational flow.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <Badge variant="outline">Python</Badge>
-                    <Badge variant="outline">OpenAI API</Badge>
-                    <Badge variant="outline">Panel</Badge>
-                    <Badge variant="outline">AI/ML</Badge>
-                  </div>
-                  <div className="flex space-x-2">
-                    <Button size="sm" variant="outline" asChild>
-                      <Link
-                        href="https://github.com/kunikapremi1108/Chatbot-prompt-eng.-.git"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github className="mr-2 h-4 w-4" />
-                        Code
-                      </Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+       <section id="projects" className="w-full py-8 md:py-16 lg:py-20 bg-muted">
+  <div className="container px-4 md:px-6 mx-auto">
+    <div className="flex flex-col items-center justify-center space-y-3 text-center">
+      <div className="space-y-2 max-w-4xl">
+        <Badge variant="secondary" className="text-base px-4 py-2">Portfolio</Badge>
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Featured Projects</h2>
+        <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          Here are some of the projects I've worked on, showcasing my skills in both design and development.
+        </p>
+      </div>
+    </div>
 
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="aspect-video relative">
-                  <Image
-                    src="/stop.jpg"
-                    width={500}
-                    height={300}
-                    alt="Stopwatch Application"
-                    className="object-cover w-full h-full"
-                  />
-                </div>
-                <CardHeader>
-                  <CardTitle>Stopwatch Application</CardTitle>
-                  <CardDescription>
-                    Sleek, user-friendly stopwatch with intuitive controls and real-time feedback using PyQt5.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <Badge variant="outline">Python</Badge>
-                    <Badge variant="outline">PyQt5</Badge>
-                    <Badge variant="outline">GUI</Badge>
-                    <Badge variant="outline">Desktop App</Badge>
-                  </div>
-                  <div className="flex space-x-2">
-                    <Button size="sm" variant="outline" asChild>
-                      <Link
-                        href="https://github.com/kunikapremi1108/Stopwatch.git"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github className="mr-2 h-4 w-4" />
-                        Code
-                      </Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="aspect-video relative">
-                  <Image
-                    src="/presents.png"
-                    width={500}
-                    height={300}
-                    alt="Design Portfolio"
-                    className="object-cover w-full h-full"
-                  />
-                </div>
-                <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
-                    <Palette className="h-5 w-5" />
-                    <span>Design Portfolio Gallery</span>
-                  </CardTitle>
-                  <CardDescription>
-                    Interactive gallery showcasing my graphic design work including social media content, print
-                    materials, and web interfaces.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <Badge variant="outline">Figma</Badge>
-                    <Badge variant="outline">UI/UX</Badge>
-                    <Badge variant="outline">Print Design</Badge>
-                    <Badge variant="outline">Branding</Badge>
-                  </div>
-                  <div className="flex space-x-2">
-                    <Button size="sm" asChild>
-                      <Link href="/portfolio">
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        View Portfolio
-                      </Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="aspect-video relative">
-                  <Image
-                    src="/music.jpg"
-                    width={100}
-                    height={100}
-                    alt="Music Player"
-                    className="object-cover w-full h-full"
-                  />
-                </div>
-                <CardHeader>
-                  <CardTitle>Music Player</CardTitle>
-                  <CardDescription>
-                    Interactive music player with play, pause, shuffle, repeat functionality and volume control.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <Badge variant="outline">HTML</Badge>
-                    <Badge variant="outline">CSS</Badge>
-                    <Badge variant="outline">JavaScript</Badge>
-                    <Badge variant="outline">Web Audio API</Badge>
-                  </div>
-                  <div className="flex space-x-2">
-                    <Button size="sm" variant="outline" asChild>
-                      <Link
-                        href="https://github.com/kunikapremi1108/codealpha_tasks.git"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github className="mr-2 h-4 w-4" />
-                        Code
-                      </Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+    <div className="mx-auto grid max-w-6xl items-stretch gap-6 py-12 lg:grid-cols-3 lg:gap-12">
+       <Card className="overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
+        <div className="relative h-40">
+          <Image
+            src="/moving .png"
+            width={100}
+            height={100}
+            alt="Design Portfolio"
+            className="object-cover w-full h-full"
+          />
+        </div>
+        <CardHeader className="p-4">
+          <CardTitle className="flex items-center space-x-2">
+            <Palette className="h-5 w-5" />
+            <span>Graphic Design porfolio</span>
+          </CardTitle>
+          <CardDescription>
+            Creating compelling visual solutions across branding, UI/UX, and dynamic media. 
+             Showcases effective logos, marketing collateral, web interfaces, and motion graphics.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="pt-0 flex-1 flex flex-col justify-end p-4">
+          <div className="flex flex-wrap gap-2 mb-4">
+            <Badge variant="outline">Motion Graphics</Badge>
+            <Badge variant="outline">UI/UX Design</Badge>
+            <Badge variant="outline">Print & Collatera</Badge>
+            <Badge variant="outline">Branding & Logos</Badge>
           </div>
-        </section>
+          <div className="flex space-x-2">
+            <Button size="sm" asChild>
+              <Link href="/portfolio">
+                <ExternalLink className="mr-2 h-4 w-4" />
+                View Portfolio
+              </Link>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+
+
+      <Card className="overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
+        <div className="relative h-40">
+          <video
+            src="/"
+            controls
+            autoPlay
+            muted
+            loop
+            className="object-cover w-full h-full rounded-md"
+          />
+        </div>
+        <CardHeader className="p-4">
+          <CardTitle className="flex items-center space-x-2">
+            <Bot className="h-5 w-5" />
+            <span>Virtual Assistant</span>
+          </CardTitle>
+          <CardDescription>
+            Interactive Virtual Assistant that listens to voice commands, automates daily tasks, provides real-time information, and responds in a personalized manner.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="pt-0 flex-1 flex flex-col justify-end p-4">
+          <div className="flex flex-wrap gap-2 mb-4">
+            <Badge variant="outline">React</Badge>
+            <Badge variant="outline">JavaScript</Badge>
+            <Badge variant="outline">Node.js</Badge>
+            <Badge variant="outline">Express.js</Badge>
+            <Badge variant="outline">MongoDB</Badge>
+            <Badge variant="outline">REST API</Badge>
+          </div>
+           <div className="flex space-x-2">
+  <Button size="sm" variant="outline" asChild>
+    <Link href="https://github.com/kunikapremi1108/Kunika-s-Virtual-Assistant-.git">
+      <Github className="mr-2 h-4 w-4" />
+      Code
+    </Link>
+  </Button>
+
+  <Button size="sm" variant="outline" asChild>
+    <Link href="https://virtual-assistant-frontend-seven.vercel.app/signin">
+      <Github className="mr-2 h-4 w-4" />
+      Deploy
+    </Link>
+  </Button>
+</div>
+
+          
+        </CardContent>
+      </Card>
+      
+       <Card className="overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
+        <div className="relative h-40">
+          <video
+            src="/"
+            controls
+            autoPlay
+            muted
+            loop
+            className="object-cover w-full h-full rounded-md"
+          />
+        </div>
+        <CardHeader className="p-4">
+          <CardTitle className="flex items-center space-x-2">
+            <Bot className="h-5 w-5" />
+            <span>Tweet app </span>
+          </CardTitle>
+          <CardDescription>
+            Minimal Twitter clone built with Django, allowing users to create, edit, delete, and search tweets with authentication support.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="pt-0 flex-1 flex flex-col justify-end p-4">
+          <div className="flex flex-wrap gap-2 mb-4">
+            <Badge variant="outline">Django</Badge>
+            <Badge variant="outline">SQLite</Badge>
+            <Badge variant="outline">Python</Badge>
+            <Badge variant="outline">HTML</Badge>
+            <Badge variant="outline">Render</Badge>
+          </div>
+          <div className="flex space-x-2">
+            <Button size="sm" variant="outline" asChild>
+              <Link href=" " target="_blank" rel="noopener noreferrer">
+                <Github className="mr-2 h-4 w-4" />
+                Code
+              </Link>
+            </Button>
+          </div>
+         
+        </CardContent>
+      </Card>
+
+      <Card className="overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
+        <div className="relative h-40">
+          <Image
+            src="/pizza.jpg"
+            width={100}
+            height={100}
+            alt="Pizza Ordering Chatbot"
+            className="object-cover w-full h-full"
+          />
+        </div>
+        <CardHeader className="p-4">
+          <CardTitle className="flex items-center space-x-2">
+            <Bot className="h-5 w-5" />
+            <span>Pizza Ordering Chatbot</span>
+          </CardTitle>
+          <CardDescription>
+            AI-powered pizza ordering chatbot with prompt engineering and context tracking for smooth
+            conversational flow.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="pt-0 flex-1 flex flex-col justify-end p-4">
+          <div className="flex flex-wrap gap-2 mb-4">
+            <Badge variant="outline">Python</Badge>
+            <Badge variant="outline">OpenAI API</Badge>
+            <Badge variant="outline">Panel</Badge>
+            <Badge variant="outline">AI/ML</Badge>
+          </div>
+          <div className="flex space-x-2">
+            <Button size="sm" variant="outline" asChild>
+              <Link
+                href="https://github.com/kunikapremi1108/Chatbot-prompt-eng.-.git"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="mr-2 h-4 w-4" />
+                Code
+              </Link>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card className="overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
+        <div className="relative h-40">
+          <Image
+            src="/stop.jpg"
+            width={100}
+            height={100}
+            alt="Stopwatch Application"
+            className="object-cover w-full h-full"
+          />
+        </div>
+        <CardHeader className="p-4">
+          <CardTitle>Stopwatch Application</CardTitle>
+          <CardDescription>
+            Sleek, user-friendly stopwatch with intuitive controls and real-time feedback using PyQt5.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="pt-0 flex-1 flex flex-col justify-end p-4">
+          <div className="flex flex-wrap gap-2 mb-4">
+            <Badge variant="outline">Python</Badge>
+            <Badge variant="outline">PyQt5</Badge>
+            <Badge variant="outline">GUI</Badge>
+            <Badge variant="outline">Desktop App</Badge>
+          </div>
+          <div className="flex space-x-2">
+            <Button size="sm" variant="outline" asChild>
+              <Link
+                href="https://github.com/kunikapremi1108/Stopwatch.git"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="mr-2 h-4 w-4" />
+                Code
+              </Link>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+
+     
+      <Card className="overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
+        <div className="relative h-40">
+          <Image
+            src="/music.jpg"
+            width={100}
+            height={100}
+            alt="Music Player"
+            className="object-cover w-full h-full"
+          />
+        </div>
+        <CardHeader className="p-4">
+          <CardTitle>Music Player</CardTitle>
+          <CardDescription>
+            Interactive music player with play, pause, shuffle, repeat functionality and volume control.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="pt-0 flex-1 flex flex-col justify-end p-4">
+          <div className="flex flex-wrap gap-2 mb-4">
+            <Badge variant="outline">HTML</Badge>
+            <Badge variant="outline">CSS</Badge>
+            <Badge variant="outline">JavaScript</Badge>
+            <Badge variant="outline">Web Audio API</Badge>
+          </div>
+          <div className="flex space-x-2">
+            <Button size="sm" variant="outline" asChild>
+              <Link
+                href="https://github.com/kunikapremi1108/codealpha_tasks.git"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="mr-2 h-4 w-4" />
+                Code
+                </Link>
+              </Button>
+            </div>
+           </CardContent>
+        </Card>
+       </div>
+     </div>
+    </section>
+
 
         {/* Skills Section */}
         <section id="skills" className="w-full py-8 md:py-16 lg:py-20">
@@ -550,7 +643,7 @@ export default function PortfolioPage() {
                     <span>Web Technologies</span>
                   </CardTitle>
                   <CardDescription>
-                    Frontend development skills for creating responsive and interactive web applications.
+                    FullStack development skills for creating responsive and interactive web applications.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="flex-1">
@@ -558,6 +651,11 @@ export default function PortfolioPage() {
                     <Badge variant="outline">HTML</Badge>
                     <Badge variant="outline">CSS</Badge>
                     <Badge variant="outline">JavaScript</Badge>
+                    <Badge variant="outline">React</Badge>
+                    <Badge variant="outline">Node.js</Badge>
+                    <Badge variant="outline">Express.js</Badge>
+                    <Badge variant="outline">REST API</Badge>
+                    <Badge variant="outline">Django</Badge>
                     <Badge variant="outline">Responsive Design</Badge>
                   </div>
                 </CardContent>
